@@ -1,8 +1,7 @@
 package com.example.mealmonkeyjetcompose.screens
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -19,8 +18,12 @@ fun SplashScreen(){
         modifier = Modifier.fillMaxSize(),
         color = Color.White
     ) {
+        Column(modifier = Modifier.fillMaxWidth().fillMaxHeight(),
+            verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally) {
+            Image(painter = painterResource(id = R.drawable.splash_background), contentDescription = "Splashscreen backGround")
 
-        Image(painter = painterResource(id = R.drawable.splash_background), contentDescription = "Splashscreen backGround")
+        }
         
         Box(
             modifier = Modifier.fillMaxSize(),
